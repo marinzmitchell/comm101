@@ -16,3 +16,30 @@ ggplot(penguins, aes(species, flipper_length_mm)) +
 # Figure 3
 ggplot(penguins, aes(body_mass_g, flipper_length_mm, color = island)) +
   geom_point()
+
+
+
+
+
+
+
+
+
+library(palmerpenguins)
+library(ggplot2)
+
+#Scales customize the expression of mapping
+
+#Manually overide default values
+ggplot(penguins, aes(x = body_mass_g,
+                     y = flipper_length_mm,
+                     color = species)) +
+  geom_point()
+
+#use a colorblind-friendly palette instead
+okabe_ito <- c("#E69f00", "#56B4e9","#009e73", "#F0E442","#0072B2")
+ggplot(penguins, aes(x = body_mass_g,
+                     y = flipper_length_mm,
+                     color = species)) +
+  geom_point()+
+  scale_color_manual(values =  )
